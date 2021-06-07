@@ -4,6 +4,7 @@ from . import _Base
 
 class _Atom(_Base):
     AtomRenderingMode = nanome.util.enums.AtomRenderingMode
+    AtomDisplayMode = nanome.util.enums.AtomDisplayMode
 
     @classmethod
     def _create(cls):
@@ -30,6 +31,7 @@ class _Atom(_Base):
         #API
         self._selected = False
         self._atom_mode = _Atom.AtomRenderingMode.BallStick
+        self._display_mode = _Atom
         self._labeled = False
         self._label_text = ""
         self._atom_rendering = True

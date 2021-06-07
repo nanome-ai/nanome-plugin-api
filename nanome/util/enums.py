@@ -22,6 +22,22 @@ class AtomRenderingMode(IntEnum):
     Adaptive = 6
 
 
+class AtomDisplayMode(IntEnum):  # TODO: write a better description.
+    """
+    | An atom will only be rendered if its display_mode setting includes all of the types the atom is part of.
+    | To be used with atom.display_mode
+    """
+    None = 0,
+    Atom = 1,
+    Het = 2,
+    Hydrogen = 4,
+    Water = 8,
+    Protein = 16,
+    Ligand = 32,
+    Solvent = 64,
+    All = Atom | Het | Hydrogen | Water | Protein | Ligand | Solvent
+
+
 class Kind(IntEnum):
     """
     | Bond types.
